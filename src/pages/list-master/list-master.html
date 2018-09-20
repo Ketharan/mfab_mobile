@@ -1,0 +1,80 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> Near-miss</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="sendServer()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-row padding>
+        <!-- Avatar -->
+        <ion-col col-3>
+          <ion-icon name="mail"  class="larger"></ion-icon>
+        </ion-col>
+        <!-- Information about user -->
+        <ion-col col- text-center >
+          <ion-item>
+            <ion-input placeholder="E-Mail" [(ngModel)]="mail" clearInput></ion-input>
+          </ion-item>
+        </ion-col>
+        
+    </ion-row>
+
+       <!-- Edit/follow button -->
+  <ion-row padding>
+    <ion-col col-3>
+      <ion-icon name="md-pin" class="larger"></ion-icon>
+    </ion-col>
+
+    <ion-col col- text-center>
+      <ion-item>
+        
+        <ion-select [(ngModel)]="location" [(ngModel)]="department" class="my-select">
+          <ion-option value="0">Marketting</ion-option>
+          <ion-option value="1">HR</ion-option>
+          <ion-option value="2">Identity Serv</ion-option>
+          <ion-option value="3">Analytics</ion-option>
+          <ion-option value="4">APIM</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row padding>
+    <ion-col col-3>
+      <ion-icon name="md-calendar" class="larger"></ion-icon>
+    </ion-col>
+    <ion-col col- text-center>
+    
+      <ion-datetime displayFormat="DD-MM-YYYY" [(ngModel)]="today" class="date-picker" aria-placeholder="Pick date" [(ngModel)]="date">
+        
+      </ion-datetime>
+      
+  </ion-col>
+
+   
+          
+  </ion-row>
+
+  <ion-row padding>
+    
+  </ion-row>
+  
+   <ion-card>
+    <ion-card-content>
+      Hello World, this is my camera app
+
+      <button (click)="takePicture()">Take a Picture</button>
+
+      Latest Picture:
+      <img [src]="base64Image" *ngIf="base64Image" />
+    </ion-card-content>
+  </ion-card>
+</ion-content>
