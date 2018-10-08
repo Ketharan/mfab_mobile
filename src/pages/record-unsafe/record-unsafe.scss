@@ -1,5 +1,6 @@
-page-list-master {
-    /* Profile avatar */
+page-record-unsafe {
+
+  /* Profile avatar */
   .avatar {
     border-radius: 20%;
     position: absolute;
@@ -11,14 +12,14 @@ page-list-master {
   }
 
   .custom-badge {
-    position:absolute; 
-    top:5px; 
-    left:15px; 
-    background: map-get($colors, danger); 
-    border-radius: 100%; 
-    color: #fff; 
+    position:absolute;
+    top:5px;
+    left:15px;
+    background: map-get($colors, danger);
+    border-radius: 100%;
+    color: #fff;
     font-size: 12px !important;
-    padding: 4px; 
+    padding: 4px;
     font-weight: bold;
   }
 
@@ -28,9 +29,9 @@ page-list-master {
 
   /* Profile edit button */
   .edit-button {
-    background: #fff; 
-    border: 1px solid #ccc; 
-    font-size: 13px; 
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 13px;
     border-radius: 3px;
     padding: 5px;
     font-weight: bold;
@@ -45,7 +46,7 @@ page-list-master {
   .larger {
     font-size: 70px;
     color: #961a01;
-    
+
   }
 
   .date-picker{
@@ -71,8 +72,13 @@ page-list-master {
   }
 
   .my-select-month {
-    min-width: 100%;
+    min-width: 100%
+  ;
+  }
+
+  .btnsave {
+    padding: 10px 24px;
+    border-radius: 12px;
+    background-color: #4CAF50;
   }
 }
-
-

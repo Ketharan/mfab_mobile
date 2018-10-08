@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle="left">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title> Save Me </ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only menuToggle="right">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding text-center>
+  <img src="http://www.opensourcetechnologies.com/wp-content/uploads/2013/12/ost_logo.png">
+  <p>IONIC 3 sidemenu example with different type of the customizable side menu options.</p>
+  <button ion-button block color="secondary" (click)="navigateToIncidents()"> Record </button>
+  <button ion-button block color="danger" (click)="navigateToMyTasks()"> My Tasks </button>
+</ion-content>

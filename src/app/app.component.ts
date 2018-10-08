@@ -39,10 +39,20 @@ export class MyApp {
     { title: 'Content', component: 'ContentPage' },
     { title: 'Login', component: 'LoginPage' },
     { title: 'Signup', component: 'SignupPage' },
-    { title: 'Master Detail', component: 'ListMasterPage' },
+    { title: 'Nearmiss', component: 'RecordNearmissPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
-    { title: 'Search', component: 'SearchPage' }
+    { title: 'Search', component: 'SearchPage' },
+    { title: 'Incidents', component: 'IncidentsPage' },
+    { title: 'Accident', component: 'RecordAccidentPage' },
+    { title: 'Accident', component: 'RecordUnsafePage' },
+    { title: 'My tasks', component: 'MyTasksTabPage' },
+    { title: 'Details', component: 'MyPendingDetailsPage' },
+    { title: 'Details', component: 'MyApprovalDetailsPage' },
+    { title: 'Details', component: 'MyTasksNewDetailsPage' },
+    { title: 'Details', component: 'MyTasksPendingDetailsPage' },
+    { title: 'Details', component: 'MyTasksCompletedDetailsPage' }
+
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {

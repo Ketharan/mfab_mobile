@@ -1,0 +1,86 @@
+page-record-accident {
+
+
+  /* Profile avatar */
+  .avatar {
+    border-radius: 20%;
+    position: absolute;
+  }
+
+  /* Small for notifications */
+  .badge-container {
+    position: relative;
+  }
+
+  .custom-badge {
+    position:absolute;
+    top:5px;
+    left:15px;
+    background: map-get($colors, danger);
+    border-radius: 100%;
+    color: #fff;
+    font-size: 12px !important;
+    padding: 4px;
+    font-weight: bold;
+  }
+
+  .info {
+    padding-top: 4px;
+  }
+
+  /* Profile edit button */
+  .edit-button {
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    border-radius: 3px;
+    padding: 5px;
+    font-weight: bold;
+    width: 90%;
+    margin-right: 30px;
+  }
+
+  .edit-button:active {
+    border-color: #dce2ed;
+  }
+
+  .larger {
+    font-size: 70px;
+    color: #961a01;
+
+  }
+
+  .date-picker{
+    font-size: 30px;
+    color: #961a01;
+    background-color: coral;
+  }
+
+  .mail-input{
+    placeholder:"E-Mail";
+  }
+
+  .my-select {
+    min-width: 100%;
+  }
+
+  .my-select-year {
+    min-width: 100%;
+  }
+
+  .my-select-date {
+    min-width: 100%;
+  }
+
+  .my-select-month {
+    min-width: 100%
+  ;
+  }
+
+  .btnsave {
+    padding: 10px 24px;
+    border-radius: 12px;
+    background-color: #4CAF50;
+  }
+
+}
