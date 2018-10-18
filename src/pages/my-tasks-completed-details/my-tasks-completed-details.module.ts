@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { MyTasksCompletedDetailsPage } from './my-tasks-completed-details';
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -8,6 +9,10 @@ import { MyTasksCompletedDetailsPage } from './my-tasks-completed-details';
   ],
   imports: [
     IonicPageModule.forChild(MyTasksCompletedDetailsPage),
+    HttpModule
   ],
+  exports: [
+    MyTasksCompletedDetailsPage
+  ]
 })
 export class MyTasksCompletedDetailsPageModule {}

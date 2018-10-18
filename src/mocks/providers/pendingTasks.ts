@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 
-import { pendingTask } from '../../models/pendingTask';
+import { task } from '../../models/Task';
 
 
 @Injectable()
 export class pendingTasks {
-  PendingTasks: pendingTask[] = [];
+  PendingTasks: task[] = [];
 
   defaultItem: any = {
     "symbol": "assets/img/speakers/bear.jpg",
@@ -46,7 +46,7 @@ export class pendingTasks {
     ];
 
     for (let pending of PendingTasks) {
-      this.PendingTasks.push(new pendingTask(pending));
+      this.PendingTasks.push(new task(null,null));
     }
   }
 
@@ -68,11 +68,11 @@ export class pendingTasks {
     });
   }
 
-  add(pending: pendingTask) {
+  add(pending: task) {
     this.PendingTasks.push(pending);
   }
 
-  delete(pending: pendingTask) {
+  delete(pending: task) {
     this.PendingTasks.splice(this.PendingTasks.indexOf(pending), 1);
   }
 }

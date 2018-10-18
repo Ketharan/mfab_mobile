@@ -22,7 +22,7 @@
     <!-- Information about user -->
     <ion-col col- text-center >
       <ion-item>
-        <ion-input placeholder="E-Mail" [(ngModel)]="mail" clearInput></ion-input>
+        <ion-input placeholder="E-Mail" [(ngModel)]="assignedMail" clearInput></ion-input>
       </ion-item>
     </ion-col>
 
@@ -38,11 +38,11 @@
       <ion-item>
 
         <ion-select [(ngModel)]="location" [(ngModel)]="department" class="my-select">
-          <ion-option value="0">Marketting</ion-option>
-          <ion-option value="1">HR</ion-option>
-          <ion-option value="2">Identity Serv</ion-option>
-          <ion-option value="3">Analytics</ion-option>
-          <ion-option value="4">APIM</ion-option>
+          <ion-option value="Marketing">Marketing</ion-option>
+          <ion-option value="HR">HR</ion-option>
+          <ion-option value="Identity Server">Identity Serv</ion-option>
+          <ion-option value="Analytics">Analytics</ion-option>
+          <ion-option value="APIM">APIM</ion-option>
         </ion-select>
       </ion-item>
     </ion-col>

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ApprovalPage } from './approval';
-import {PendingTasksPage} from "../pending-tasks/pending-tasks";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -9,6 +9,7 @@ import {PendingTasksPage} from "../pending-tasks/pending-tasks";
   ],
   imports: [
     IonicPageModule.forChild(ApprovalPage),
+    HttpModule
   ],
   exports: [
     ApprovalPage

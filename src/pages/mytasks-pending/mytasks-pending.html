@@ -18,7 +18,7 @@
   <ion-list padding="">
 
     <ion-item *ngFor="let pendings of currentPendingTasks">
-      <button ion-item (click)="navigateToDetails()">
+      <button ion-item (click)="navigateToDetails(pendings.recordId)">
         <ion-avatar item-start>
           <img [src]="pendings.symbol">
         </ion-avatar>

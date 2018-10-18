@@ -18,10 +18,10 @@
 <ion-content padding class="card-background-page">
   <ion-card>
     <ion-card-header>
-      Assigned to :
+      Assigned By :
     </ion-card-header>
     <ion-card-content>
-      sketharan@gmil.com
+      {{assignerMail}}
     </ion-card-content>
   </ion-card>
 
@@ -30,7 +30,7 @@
       Completion Date :
     </ion-card-header>
     <ion-card-content>
-      2018 - 05- 12
+      {{completionDate}}
     </ion-card-content>
   </ion-card>
 
@@ -39,21 +39,12 @@
       Department :
     </ion-card-header>
     <ion-card-content>
-      Marketing
+      {{department}}
     </ion-card-content>
   </ion-card>
 
   <ion-card>
-    <ion-card-header>
-      Assigned to :
-    </ion-card-header>
-    <ion-card-content>
-      sketharan@gmil.com
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <img src="img/card-amsterdam.png"/>
+    <img src="{{image}}"/>
 
   </ion-card>
 
@@ -62,7 +53,7 @@
       <ion-icon name='people'></ion-icon>
       Re-assign
     </button>
-    <button ion-button color="secondary" outline  icon-start (click)="updateAssignee()">
+    <button ion-button color="secondary" outline  icon-start (click)="updateStatus()">
       <ion-icon name='paw' is-active="false"></ion-icon>
       Update
     </button>

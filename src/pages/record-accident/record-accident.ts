@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import {IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
-import { Item } from '../../models/item';
-import { record } from '../../models/record';
-import { Items } from '../../providers';
-
 import {Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
@@ -21,75 +17,59 @@ import 'rxjs/add/operator/map';
   templateUrl: 'record-accident.html',
 })
 export class RecordAccidentPage {
-
   public base64Image: string;
-  public mail: string;
+  public assignedMail: string;
   public date: string;
   public department: string;
+  public userMail: string;
+  public incidentType: string;
+  public state: string;
 
-  currentItems: Item[];
-
-
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController,private camera: Camera,
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController,private camera: Camera,
               private http: Http) {
-    this.currentItems = this.items.query();
+    this.userMail = "gingerameer@gmail.com";
+    this.incidentType = "ACCIDENT";
+    this.state = "PENDING";
+    //todo for testing purpose this kept as pending will be converted to new when notification done
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecordNearmissPage');
   }
 
+  /**
+   * Camera configurations
+   */
   takePicture(){
-
     const options: CameraOptions = {
       quality: 100,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
-    }
+    };
+
     this.camera.getPicture(options).then((imageData) => {
-      // imageData is either a base64 encoded string or a file URI
-      // If it's base64 (DATA_URL):
       this.base64Image = 'data:image/jpeg;base64,' + imageData;
     }, (err) => {
-      // Handle error
+      alert("Permissions Rejected");
     });
-
   };
 
   sendServer(){
-
-
-    console.log(this.mail);
-    console.log(this.date);
-    console.log(this.department);
-    console.log(this.base64Image);
-    console.log(this.date);
-
-    var date = this.date.split("-");
-
-    let rec = new record(this.mail,this.department,this.base64Image,this.date);
-
-
     let headers = new Headers();
-
     headers.append('Content-Type', 'application/json');
 
-    let data=JSON.stringify({mail : this.mail,department : this.department,photo:this.base64Image,date :{date : date[0],year : date[1], month : date[2] } });
+    let data=JSON.stringify({'userMail' : this.userMail, 'assignedMail' : this.assignedMail,
+      'department' : this.department, 'completionDate' : this.date, 'incidentType' : this.incidentType,
+      'image' : this.base64Image, 'state' : this.state });
 
-    this.http.post('http://192.168.8.101:8080/greeting', data, {headers}).map(res => res.json())
+    this.http.post('http://10.100.4.177:8080/addRecord', data, {headers}).map(res => res.json())
       .subscribe(res => {
-        alert("success:");
+        alert("Near-miss incident successfully recorded");
       }, (err) => {
-        alert("failed");
+        //alert(err.toLocaleString());
+        alert("Unable to record. Check your internet connectivity.");
       });
 
-
-
-
-
-
-
   }
-
 }
