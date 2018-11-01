@@ -64,18 +64,12 @@
 
   </ion-row>
 
-  <ion-row padding>
 
+  <ion-row padding >
+    Add a Picture
+    <button class="btncam" (click)="takePicture()"><img src="assets/img/cam.jpg" alt=""  width="70" height="48" ></button>
+    <img [src]="base64Image" *ngIf="base64Image" />
   </ion-row>
 
-  <ion-card>
-    <ion-card-content>
-      Hello World, this is my camera app
 
-      <button (click)="takePicture()">Take a Picture</button>
-
-      Latest Picture:
-      <img [src]="base64Image" *ngIf="base64Image" />
-    </ion-card-content>
-  </ion-card>
 </ion-content>

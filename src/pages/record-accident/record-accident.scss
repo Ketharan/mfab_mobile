@@ -38,6 +38,7 @@ page-record-accident {
     font-weight: bold;
     width: 90%;
     margin-right: 30px;
+
   }
 
   .edit-button:active {
@@ -51,9 +52,9 @@ page-record-accident {
   }
 
   .date-picker{
-    font-size: 30px;
-    color: #961a01;
-    background-color: coral;
+    font-size: 26px;
+    color: #000000;
+    background-color: #ac0b17;
   }
 
   .mail-input{
@@ -76,11 +77,16 @@ page-record-accident {
     min-width: 100%
   ;
   }
-
   .btnsave {
     padding: 10px 24px;
     border-radius: 12px;
-    background-color: #4CAF50;
+    background-color: #ac0b17;
   }
+
+   .btncam {
+      padding: 10px 24px;
+      border-radius: 12px;
+      background-color: #ffffff;
+    }
 
 }

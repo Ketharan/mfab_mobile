@@ -48,10 +48,11 @@ page-record-nearmiss {
 
   }
 
+
   .date-picker{
-    font-size: 30px;
-    color: #961a01;
-    background-color: coral;
+    font-size: 26px;
+    color: #000000;
+    background-color: #ac0b17;
   }
 
   .mail-input{
@@ -76,8 +77,14 @@ page-record-nearmiss {
   }
 
   .btnsave {
-    padding: 10px 24px;
-    border-radius: 12px;
-    background-color: #4CAF50;
-  }
+      padding: 10px 24px;
+      border-radius: 12px;
+      background-color: #ac0b17;
+    }
+
+     .btncam {
+        padding: 10px 24px;
+        border-radius: 12px;
+        background-color: #ffffff;
+      }
 }
