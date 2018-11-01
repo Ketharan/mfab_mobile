@@ -43,4 +43,8 @@ export class MainPage {
   navigateToMyTasks(){
     this.navCtrl.push('MyTasksTabPage');
   }
+
+  navigateToGame(){
+    this.navCtrl.push('MygamePage')
+  }
 }
